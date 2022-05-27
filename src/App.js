@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+
+// styles
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyles } from './styles/global';
+
+import { theme } from './styles/theme';
+
+import { dark, light } from './styles/ModeTheme';
+
+// components
+import Home from './pages/Home';
+import Navbar from './components/Navbar';
 
 function App() {
+  const [modeTheme, setModeTheme] = useState(light);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div>
+        <Navbar />
+        <Home />
+      </div>
+    </ThemeProvider>
   );
 }
 
