@@ -1,4 +1,4 @@
-export const menuData = {
+export const Data = {
   menu: {
     starters: [
       {

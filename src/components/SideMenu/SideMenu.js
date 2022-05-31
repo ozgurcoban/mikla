@@ -43,8 +43,9 @@ const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: ${({ theme }) => theme.secondaryDark};
+  background: ${({ theme }) => theme.sideMenu};
   height: 100vh;
+  width: 100%;
   text-align: left;
   padding: 1rem;
   position: absolute;
@@ -69,7 +70,7 @@ const StyledMenu = styled.nav`
     padding: 1rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
-    color: ${({ theme }) => theme.primaryDark};
+    color: ${({ theme }) => theme.text};
     text-decoration: none;
     transition: color 0.3s linear;
 

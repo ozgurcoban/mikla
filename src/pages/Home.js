@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { LinkBoxContainer } from '../components/LinkBoxContainer';
 
 // components
 import CountdownTimer from '../components/CountdownTimer/CountdownTimer';
@@ -12,7 +13,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Turkiskt kök med autentiska smaker</h1>
+      <LinkBoxContainer />
     </div>
 
     /* <CountdownTimer targetDate={dateTimeAfterThreeDays} />
