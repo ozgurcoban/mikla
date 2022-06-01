@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export const LinkBoxContainer = () => {
+export const LinkCardContainer = () => {
   return (
     <Section>
       <h1>

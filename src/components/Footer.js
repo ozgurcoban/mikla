@@ -6,12 +6,11 @@ export const Footer = () => {
 
 const FooterStyled = styled.footer`
   background: black;
-
-  bottom: '0';
   width: 100%;
   color: white;
   padding: 2rem;
   display: grid;
-
+  bottom: 0;
+  position: absolute;
   place-items: center;
 `;

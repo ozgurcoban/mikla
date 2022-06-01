@@ -8,6 +8,7 @@ export const GlobalStyles = createGlobalStyle`
   *, *::after, *::before {
     box-sizing: border-box;
   }
+
   body {
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
@@ -15,20 +16,12 @@ export const GlobalStyles = createGlobalStyle`
     transition: all .5s linear;
   }
 
-  .btn-primary {
-    background: transparent;
-    color: ${({ theme }) => theme.text};
-    padding: 0.5rem 1.5rem;
-    font-size: 1.5rem;
-    border-radius: 1rem;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    transition: all .5s linear;
-    position: absolute;
-    top: 1.5rem;
-    right: 2rem
+  #container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
   }
+
     
     /* align-items: center;
     background: ${({ theme }) => theme.primaryLight};
@@ -43,15 +36,16 @@ export const GlobalStyles = createGlobalStyle`
   `;
 
 export const lightTheme = {
-  body: '#fff',
+  body: 'linear-gradient(0deg, rgba(148,156,229,1) 25%, rgba(241,178,182,1) 100%)',
   text: '#121212',
   primary: '#6200ee',
-  sideMenu: 'red',
+  sideMenuBackGround:
+    'linear-gradient(0deg, rgba(237,239,255,1) 33%, rgba(255,210,213,1) 100%)',
 };
 
 export const darkTheme = {
-  body: 'black',
+  body: '#1b1b1b',
   text: '#fff',
   primary: '#bb86fc',
-  sideMenu: 'orange',
+  sideMenuBackGround: 'rgb(42, 43, 46)',
 };

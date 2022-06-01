@@ -1,19 +1,25 @@
 import styled from 'styled-components';
-import { LinkBoxContainer } from '../components/LinkBoxContainer';
+import { Outlet } from 'react-router-dom';
 
 // components
 import CountdownTimer from '../components/CountdownTimer/CountdownTimer';
 import CountdownTimer2 from '../components/CountdownTimer/CountdownTimer2';
+import { LinkCardContainer } from '../components/LinkCardContainer';
+import Navbar from '../components/Navbar';
+import { Footer } from '../components/Footer';
 
 const Home = () => {
   //countdown timer
-  const THREE_DAYS_IN_MS = 5 * 24 * 60 * 60 * 1000;
-  const NOW_IN_MS = new Date().getTime();
-  const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
+  // const THREE_DAYS_IN_MS = 5 * 24 * 60 * 60 * 1000;
+  // const NOW_IN_MS = new Date().getTime();
+  // const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
 
   return (
     <div>
-      <LinkBoxContainer />
+      <Navbar />
+      <LinkCardContainer />
+      <Outlet />
+      <Footer />
     </div>
 
     /* <CountdownTimer targetDate={dateTimeAfterThreeDays} />

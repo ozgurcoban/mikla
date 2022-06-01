@@ -43,7 +43,7 @@ const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: ${({ theme }) => theme.sideMenu};
+  background: ${({ theme }) => theme.sideMenuBackGround};
   height: 100vh;
   width: 100%;
   text-align: left;
@@ -51,6 +51,7 @@ const StyledMenu = styled.nav`
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
   transition: transform 0.3s ease-in-out;
   transform: translateX(-100%);
   overflow: hidden;
