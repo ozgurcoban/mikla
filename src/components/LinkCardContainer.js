@@ -12,7 +12,7 @@ export const LinkCardContainer = () => {
 
       <article className='link-1'>Pizza</article>
       <article>Grill & Meze</article>
-      <article>Catering</article>
+      <article>Catering1</article>
     </Section>
   );
 };
@@ -22,6 +22,7 @@ const Section = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 3rem;
 
   h1 {
     text-align: center;

@@ -16,7 +16,7 @@ function App() {
   const [theme, toggleTheme] = useDarkMode();
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
   return (
-    <div id='container'>
+    <div id='app'>
       <BrowserRouter>
         <ThemeProvider theme={themeMode}>
           <GlobalStyles />

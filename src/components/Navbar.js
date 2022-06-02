@@ -16,14 +16,15 @@ const Navbar = () => {
 
   return (
     <Nav>
-      <Burger open={open} setOpen={setOpen} />
+      <BurgerWrapper>
+        <Burger open={open} setOpen={setOpen} />
+      </BurgerWrapper>
       {/* <Toggle theme={theme} toggleTheme={toggleTheme} /> */}
       <Wrapper>
         <Link to='/'>Home</Link>
         <Link to='menu'>Meny</Link>
         <Link to='catering'>Catering</Link>
       </Wrapper>
-
       <SideMenu open={open} setOpen={setOpen} />
     </Nav>
   );
@@ -37,6 +38,16 @@ const Nav = styled.nav`
   height: 6rem;
 `;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  @media (max-width: 578px) {
+    display: none;
+  }
+`;
+
+const BurgerWrapper = styled.div`
+  @media (min-width: 578px) {
+    display: none;
+  }
+`;
 
 export default Navbar;

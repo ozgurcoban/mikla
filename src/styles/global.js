@@ -15,13 +15,24 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     transition: all .5s linear;
   }
-  #container {
+  /* #container {
     position: relative;
   min-height: 100vh;
-  }
+  } */
 
-
-
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+#app {
+  flex: 1 0 auto;
+}
+footer {
+  flex-shrink: 0;
+}
     
     /* align-items: center;
     background: ${({ theme }) => theme.primaryLight};
