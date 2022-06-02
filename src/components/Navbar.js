@@ -18,9 +18,12 @@ const Navbar = () => {
     <Nav>
       <Burger open={open} setOpen={setOpen} />
       {/* <Toggle theme={theme} toggleTheme={toggleTheme} /> */}
-      <Link to='/'>Home</Link>
-      <Link to='menu'>Meny</Link>
-      <Link to='catering'>Catering</Link>
+      <Wrapper>
+        <Link to='/'>Home</Link>
+        <Link to='menu'>Meny</Link>
+        <Link to='catering'>Catering</Link>
+      </Wrapper>
+
       <SideMenu open={open} setOpen={setOpen} />
     </Nav>
   );
@@ -33,5 +36,7 @@ const Nav = styled.nav`
   align-items: center;
   height: 6rem;
 `;
+
+const Wrapper = styled.div``;
 
 export default Navbar;

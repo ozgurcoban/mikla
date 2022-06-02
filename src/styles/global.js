@@ -8,19 +8,19 @@ export const GlobalStyles = createGlobalStyle`
   *, *::after, *::before {
     box-sizing: border-box;
   }
-
+  
   body {
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
     font-family: 'Roboto', sans-serif;
     transition: all .5s linear;
   }
-
   #container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+    position: relative;
+  min-height: 100vh;
   }
+
+
 
     
     /* align-items: center;

@@ -30,7 +30,7 @@ const Section = styled.section`
   }
 
   article {
-    padding: 1rem;
+    padding: 1.5rem;
     margin: 1rem;
   }
 `;
