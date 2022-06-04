@@ -15,35 +15,13 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     transition: all .5s linear;
   }
-  /* #container {
-    position: relative;
-  min-height: 100vh;
-  } */
-
-html, body {
-  height: 100%;
-}
-body {
-  display: flex;
-  flex-direction: column;
-}
+ 
 #app {
-  flex: 1 0 auto;
-}
-footer {
-  flex-shrink: 0;
+  position: relative;
+  min-height: 100vh;
 }
     
-    /* align-items: center;
-    background: ${({ theme }) => theme.primaryLight};
-    color: ${({ theme }) => theme.primaryDark};
-    display: flex;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    height: 100vh;
-    justify-content: center;
-    text-rendering: optimizeLegibility;
-    transition: all 0.50s linear; 
-  }*/
+
   `;
 
 export const lightTheme = {

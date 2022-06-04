@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+// import Damask from '../assets/Damask.svg';
 
 export const LinkCardContainer = () => {
   return (
@@ -12,7 +13,7 @@ export const LinkCardContainer = () => {
 
       <article className='link-1'>Pizza</article>
       <article>Grill & Meze</article>
-      <article>Catering1</article>
+      <article>Catering</article>
     </Section>
   );
 };
@@ -35,3 +36,7 @@ const Section = styled.section`
     margin: 1rem;
   }
 `;
+
+// const StyledBackground = styled(DamaskBackground)`
+//   color: red;
+// `;

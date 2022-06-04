@@ -1,14 +1,13 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 // components
 import Burger from './Burger/Burger';
 import SideMenu from './SideMenu/SideMenu';
-// import { Toggle } from './Toggle';
-// import { useDarkMode } from '../hooks/useDarkMode';
+import { Toggle } from './Toggle';
 
-const Navbar = () => {
+const Navbar = ({ theme, toggleTheme }) => {
   // hamburger menu
   const [open, setOpen] = useState(false);
   // const [theme, toggleTheme] = useDarkMode();
@@ -19,12 +18,12 @@ const Navbar = () => {
       <BurgerWrapper>
         <Burger open={open} setOpen={setOpen} />
       </BurgerWrapper>
-      {/* <Toggle theme={theme} toggleTheme={toggleTheme} /> */}
-      <Wrapper>
+      <Toggle theme={theme} toggleTheme={toggleTheme} />
+      <LinkWrapper>
         <Link to='/'>Home</Link>
         <Link to='menu'>Meny</Link>
         <Link to='catering'>Catering</Link>
-      </Wrapper>
+      </LinkWrapper>
       <SideMenu open={open} setOpen={setOpen} />
     </Nav>
   );
@@ -38,7 +37,7 @@ const Nav = styled.nav`
   height: 6rem;
 `;
 
-const Wrapper = styled.div`
+const LinkWrapper = styled.div`
   @media (max-width: 578px) {
     display: none;
   }

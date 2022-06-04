@@ -5,12 +5,10 @@ export const Footer = () => {
 };
 
 const FooterStyled = styled.footer`
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
-  min-height: 2.5rem;
-  padding: 2rem 2rem 0 2rem;
-  height: 4rem;
+  height: 2.5rem;
   background-color: red;
 `;
 

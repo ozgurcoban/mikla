@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { Outlet } from 'react-router-dom';
 
 // components
@@ -8,19 +7,19 @@ import { LinkCardContainer } from '../components/LinkCardContainer';
 import Navbar from '../components/Navbar';
 import { Footer } from '../components/Footer';
 
-const Home = () => {
+const Home = ({ theme, toggleTheme }) => {
   //countdown timer
   // const THREE_DAYS_IN_MS = 5 * 24 * 60 * 60 * 1000;
   // const NOW_IN_MS = new Date().getTime();
   // const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
 
   return (
-    <div>
-      <Navbar />
+    <>
+      <Navbar theme={theme} toggleTheme={toggleTheme} />
       <LinkCardContainer />
       <Outlet />
       <Footer />
-    </div>
+    </>
 
     /* <CountdownTimer targetDate={dateTimeAfterThreeDays} />
       <Div>
@@ -28,13 +27,5 @@ const Home = () => {
       </Div> */
   );
 };
-
-// const Div = styled.div`
-//   display: flex;
-//   height: 100px;
-//   align-items: center;
-//   justify-content: center;
-//   width: 100vw;
-// `;
 
 export default Home;
