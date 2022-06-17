@@ -3,7 +3,7 @@ import { bool, func } from 'prop-types';
 
 const Burger = ({ open, setOpen }) => {
   return (
-    <StyledBurger open={open} onClick={() => setOpen(!open)}>
+    <StyledBurger className='BURGER' open={open} onClick={() => setOpen(!open)}>
       <div />
       <div />
       <div />
@@ -17,9 +17,9 @@ Burger.propTypes = {
 };
 
 const StyledBurger = styled.button`
-  position: absolute;
-  top: 5%;
-  left: 2rem;
+  /* position: absolute; */
+  /* top: 5%;
+  left: 2rem; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -41,7 +41,7 @@ const StyledBurger = styled.button`
     background: ${({ theme }) => theme.text};
     border-radius: 10px;
     transition: all 0.3s linear;
-    position: relative;
+    /* position: relative; */
     transform-origin: 1px;
 
     &:first-child {

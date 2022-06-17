@@ -6,7 +6,7 @@ import styled from 'styled-components';
 export const Toggle = ({ theme, toggleTheme }) => {
   // console.log(toggleTheme);
   return (
-    <Button onClick={toggleTheme}>
+    <Button className='TOGGLE' onClick={toggleTheme}>
       {theme === 'light' ? <FiSun /> : <FaMoon />}
     </Button>
   );
@@ -15,14 +15,13 @@ export const Toggle = ({ theme, toggleTheme }) => {
 const Button = styled.button`
   background: transparent;
   color: ${({ theme }) => theme.text};
-  padding: 0.5rem 1.5rem;
   font-size: 2rem;
   border-radius: 1rem;
   cursor: pointer;
   outline: none;
   border: none;
   transition: all 0.5s linear;
-  position: absolute;
-  top: 1.2rem;
-  right: 0rem;
+  /* position: absolute; */
+  /* top: 1.2rem;
+  right: 0rem; */
 `;

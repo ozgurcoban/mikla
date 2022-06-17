@@ -3,9 +3,10 @@ import { Outlet } from 'react-router-dom';
 // components
 import CountdownTimer from '../components/CountdownTimer/CountdownTimer';
 import CountdownTimer2 from '../components/CountdownTimer/CountdownTimer2';
-import { LinkCardContainer } from '../components/LinkCardContainer';
+
 import Navbar from '../components/Navbar';
 import { Footer } from '../components/Footer';
+import Hero from '../components/Hero';
 
 const Home = ({ theme, toggleTheme }) => {
   //countdown timer
@@ -16,7 +17,7 @@ const Home = ({ theme, toggleTheme }) => {
   return (
     <>
       <Navbar theme={theme} toggleTheme={toggleTheme} />
-      <LinkCardContainer />
+      <Hero />
       <Outlet />
       <Footer />
     </>

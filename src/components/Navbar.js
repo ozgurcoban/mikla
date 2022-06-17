@@ -14,25 +14,25 @@ const Navbar = ({ theme, toggleTheme }) => {
   // console.log(toggleTheme);
 
   return (
-    <Nav>
-      <BurgerWrapper>
-        <Burger open={open} setOpen={setOpen} />
-      </BurgerWrapper>
+    <Header>
+      <Burger open={open} setOpen={setOpen} />
       <Toggle theme={theme} toggleTheme={toggleTheme} />
+
       <LinkWrapper>
         <Link to='/'>Home</Link>
         <Link to='menu'>Meny</Link>
         <Link to='catering'>Catering</Link>
       </LinkWrapper>
       <SideMenu open={open} setOpen={setOpen} />
-    </Nav>
+    </Header>
   );
 };
 
-const Nav = styled.nav`
-  width: 100%;
+const Header = styled.header`
+  width: 90%;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 6rem;
 `;
@@ -43,7 +43,7 @@ const LinkWrapper = styled.div`
   }
 `;
 
-const BurgerWrapper = styled.div`
+const Wrapper = styled.div`
   @media (min-width: 578px) {
     display: none;
   }

@@ -19,9 +19,8 @@ export const GlobalStyles = createGlobalStyle`
 #app {
   position: relative;
   min-height: 100vh;
+  
 }
-    
-
   `;
 
 export const lightTheme = {
@@ -30,6 +29,7 @@ export const lightTheme = {
   primary: '#6200ee',
   sideMenuBackGround:
     'linear-gradient(0deg, rgba(237,239,255,1) 33%, rgba(255,210,213,1) 100%)',
+  opacity: '0.6',
 };
 
 export const darkTheme = {
@@ -37,4 +37,5 @@ export const darkTheme = {
   text: '#fff',
   primary: '#bb86fc',
   sideMenuBackGround: 'rgb(42, 43, 46)',
+  opacity: '0.2',
 };
