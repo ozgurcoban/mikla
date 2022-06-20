@@ -16,8 +16,7 @@ export const GlobalStyles = createGlobalStyle`
     transition: all .5s linear;
   }
  
-#app {
-  position: relative;
+#app {  
   min-height: 100vh;
   
 }

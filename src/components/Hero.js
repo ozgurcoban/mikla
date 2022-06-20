@@ -1,21 +1,31 @@
 import styled from 'styled-components';
-import { StyledHero, Pizza, Grill, Catering, H1 } from '../styles/Hero.styled';
+import { Link } from 'react-router-dom';
+import {
+  StyledHero,
+  Pizza,
+  Grill,
+  Catering,
+  H1,
+  Div,
+  Img,
+  Span,
+} from '../styles/Hero.styled';
 import { Container } from '../styles/Container.styled';
 
 const Hero = () => {
   return (
     <StyledHero>
-      <Container>
+      <Link to='/pizza'>
         <Pizza>
           <H1>Pizza</H1>
         </Pizza>
-        <Grill>
-          <H1>Grill</H1>
-        </Grill>
-        <Catering>
-          <H1>Catering</H1>
-        </Catering>
-      </Container>
+      </Link>
+      <Grill>
+        <H1>Grill</H1>
+      </Grill>
+      <Catering>
+        <H1>Catering</H1>
+      </Catering>
     </StyledHero>
   );
 };
