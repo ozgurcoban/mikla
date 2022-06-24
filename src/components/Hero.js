@@ -1,18 +1,16 @@
-import styled from 'styled-components';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {
-  StyledHero,
-  Pizza,
-  Grill,
-  Catering,
-  H1,
-  Div,
-  Img,
-  Span,
-} from '../styles/Hero.styled';
-import { Container } from '../styles/Container.styled';
+import { StyledHero, Pizza, Grill, Catering, H1 } from '../styles/Hero.styled';
+
+import Modal from './Modal';
 
 const Hero = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(prev => !prev);
+  };
+  console.log(showModal);
   return (
     <StyledHero>
       <Link to='/pizza'>
@@ -23,8 +21,9 @@ const Hero = () => {
       <Grill>
         <H1>Grill</H1>
       </Grill>
-      <Catering>
+      <Catering onClick={openModal}>
         <H1>Catering</H1>
+        <Modal showModal={showModal} setShowModal={setShowModal} />
       </Catering>
     </StyledHero>
   );

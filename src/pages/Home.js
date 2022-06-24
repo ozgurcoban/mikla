@@ -17,7 +17,9 @@ const Home = ({ theme, toggleTheme }) => {
   return (
     <>
       <Navbar theme={theme} toggleTheme={toggleTheme} />
-      <Hero />
+      <main>
+        <Hero />
+      </main>
       <Outlet />
       <Footer />
     </>
