@@ -3,9 +3,8 @@ import { useSpring, animated } from 'react-spring';
 
 import {
   Background,
-  ModalWrapper,
-  ModalContent,
   CloseModalButton,
+  ModalWrapper,
 } from '../styles/Modal.styled';
 
 import CateringForm from './CateringForm/CateringForm';
@@ -28,12 +27,12 @@ export default function Modal({ showModal, setShowModal }) {
     <>
       {showModal ? (
         <Background>
-          <animated.div style={animation}>
-            <ModalWrapper showModal={showModal}>
+          <ModalWrapper>
+            <animated.div style={animation}>
               <CateringForm />
               <CloseModalButton aria-label='Close modal' onClick={closeModal} />
-            </ModalWrapper>
-          </animated.div>
+            </animated.div>
+          </ModalWrapper>
         </Background>
       ) : null}
     </>

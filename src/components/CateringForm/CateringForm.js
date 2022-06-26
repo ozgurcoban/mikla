@@ -1,73 +1,79 @@
 import CateringFrom from './CateringForm.css';
 
+import {
+  Card,
+  Div,
+  Button,
+  Form,
+  Textarea,
+} from '../../styles/CateringForm.styled';
+
+// https://codepen.io/Ranjith_/pen/abwzrxN
+
 const CateringForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
     console.log('submitted');
   };
   return (
-    <div class='container'>
-      <form id='contact' action='' method='post'>
-        <h3>Colorlib Contact Form</h3>
-        <h4>Contact us for custom quote</h4>
-        <fieldset>
+    <Card>
+      <h3>Catering</h3>
+      <h4>
+        Vi erbjuder catering för små och stora tillställningar. Fyll i
+        formuläret nedan så hör vi av oss så snart som möjligt.
+      </h4>
+      <Form id='contact' action='' method='post'>
+        <Div>
+          <label htmlFor='first-name'>Förnamn</label>
           <input
-            placeholder='Your name'
+            placeholder='Förnamn'
             type='text'
-            tabindex='1'
             required
             autofocus
+            id='first-name'
           />
-        </fieldset>
-        <fieldset>
+        </Div>
+        <Div>
+          <label htmlFor='last-name'>Förnamn</label>
           <input
-            placeholder='Your Email Address'
-            type='email'
-            tabindex='2'
+            placeholder='Efternamn'
+            type='text'
             required
-          />
-        </fieldset>
-        <fieldset>
-          <input
-            placeholder='Your Phone Number (optional)'
-            type='tel'
-            tabindex='3'
+            id='last-name'
+          ></input>
+        </Div>
+        <Div>
+          <label htmlFor='email'>Email</label>
+          <input placeholder='E-post' type='email' id='email' required />
+        </Div>
+        <Div>
+          <label htmlFor='phone'>Telefonnummer</label>
+          <input placeholder='Telefonnummer' type='tel' required id='phone' />
+        </Div>
+        <Div className='catering-form--number-input'>
+          <label for='numbers'>Antal gäster</label>
+          <input type='number' id='numbers' required />
+        </Div>
+        <Div>
+          <label htmlFor='message'>Meddelande</label>
+          <Textarea
+            placeholder='Skriv ditt meddelande här...'
             required
-          />
-        </fieldset>
-        <fieldset>
-          <input
-            placeholder='Your Web Site (optional)'
-            type='url'
-            tabindex='4'
-            required
-          />
-        </fieldset>
-        <fieldset>
-          <textarea
-            placeholder='Type your message here....'
-            tabindex='5'
-            required
-          ></textarea>
-        </fieldset>
-        <fieldset>
-          <button
+            id='message'
+          ></Textarea>
+        </Div>
+        <Div>
+          <Button
             name='submit'
             type='submit'
             id='contact-submit'
             data-submit='...Sending'
           >
-            Submit
-          </button>
-        </fieldset>
-        <p class='copyright'>
-          Designed by{' '}
-          <a href='https://colorlib.com' target='_blank' title='Colorlib'>
-            Colorlib
-          </a>
-        </p>
-      </form>
-    </div>
+            Skicka
+          </Button>
+        </Div>
+      </Form>
+    </Card>
   );
 };
 

@@ -15,11 +15,6 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     transition: all .5s linear;
   }
- 
-#app {  
-  min-height: 100vh;
-  
-}
   `;
 
 export const lightTheme = {

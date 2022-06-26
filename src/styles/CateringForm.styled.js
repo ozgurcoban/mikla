@@ -1,20 +1,38 @@
 import styled from 'styled-components';
 
-export const Container = styled.div``;
+export const Card = styled.div`
+  width: 600px;
+  height: 600px;
+  border: 1px solid lightgray;
+  border-radius: 1rem;
+  padding: 2rem;
+`;
 export const Form = styled.form`
-  padding: 1rem;
-  height: 100%;
-  border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
-  width: 20rem;
+  justify-content: space-between;
+  align-items: start;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 `;
-export const Name = styled.input`
-  padding: 1rem;
+
+export const Div = styled.div`
+  border: medium none !important;
+  min-width: 100%;
+  width: 100%;
+  padding: 10px;
+
+  label {
+    display: block;
+    margin: 1rem 0 0.5rem 0;
+  }
 `;
-export const Email = styled.input``;
-export const AmountPeople = styled.input``;
-export const Message = styled.textarea``;
-export const SubmitButton = styled.button`
-  background-color: red;
+
+export const Textarea = styled.textarea`
+  height: 100px;
+  max-width: 100%;
+  resize: none;
 `;
+
+export const Button = styled.button``;

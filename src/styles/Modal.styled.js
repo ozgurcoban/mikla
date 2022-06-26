@@ -13,11 +13,14 @@ export const Background = styled.div`
 
 export const ModalWrapper = styled.div`
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-  background: #fff;
+  background: ${({ theme }) => theme.sideMenuBackGround};
   color: #000;
   z-index: 10;
   border-radius: 10px;
   position: relative;
+  width: 90%;
+
+  height: 80vh;
 `;
 
 export const CloseModalButton = styled(MdClose)`
