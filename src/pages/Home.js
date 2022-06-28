@@ -7,7 +7,7 @@ import { Footer } from '../components/Footer';
 import Hero from '../components/Hero';
 import MenuSection from '../components/MenuSection';
 import AboutSection from '../components/AboutSection';
-import CarouselSection from '../components/CarouselComponent';
+import CarouselSection from '../components/Carousel/CarouselComponent';
 
 const Home = ({ theme, toggleTheme }) => {
   //countdown timer

@@ -1,0 +1,10 @@
+.container {
+  height: 70vh;
+}
+
+.container img {
+  max-height: 100%;
+  max-width: 100%;
+  background-size: cover;
+  object-fit: cover;
+}

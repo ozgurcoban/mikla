@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 import image from '../assets/img/hero_background.jpg';
-import CarouselComponent from './CarouselComponent';
+import CarouselComponent from './Carousel/CarouselComponent';
 
 import Modal from './Modal';
 
