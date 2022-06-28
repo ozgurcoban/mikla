@@ -14,11 +14,24 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.text};
     font-family: 'Roboto', sans-serif;
     transition: all .5s linear;
+    
   }
+
+  #app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    main {
+    width: 90%;
+    margin: 0 auto;
+    }
+  }
+
   `;
 
 export const lightTheme = {
-  body: 'linear-gradient(0deg, rgba(148,156,229,1) 25%, rgba(241,178,182,1) 100%)',
+  body: 'f4f4f4',
   text: '#121212',
   primary: '#6200ee',
   sideMenuBackGround:

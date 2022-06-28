@@ -1,5 +1,3 @@
-import { Outlet } from 'react-router-dom';
-
 // components
 import CountdownTimer from '../components/CountdownTimer/CountdownTimer';
 import CountdownTimer2 from '../components/CountdownTimer/CountdownTimer2';
@@ -7,6 +5,9 @@ import CountdownTimer2 from '../components/CountdownTimer/CountdownTimer2';
 import Navbar from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import Hero from '../components/Hero';
+import MenuSection from '../components/MenuSection';
+import AboutSection from '../components/AboutSection';
+import CarouselSection from '../components/CarouselComponent';
 
 const Home = ({ theme, toggleTheme }) => {
   //countdown timer
@@ -16,12 +17,15 @@ const Home = ({ theme, toggleTheme }) => {
 
   return (
     <>
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
+      {/* <Navbar theme={theme} toggleTheme={toggleTheme} /> */}
       <main>
         <Hero />
+
+        <MenuSection />
+        <AboutSection />
       </main>
-      <Outlet />
-      <Footer />
+
+      {/* <Footer /> */}
     </>
 
     /* <CountdownTimer targetDate={dateTimeAfterThreeDays} />

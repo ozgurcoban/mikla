@@ -10,6 +10,8 @@ import { Catering } from './pages/CateringPage';
 import { Error } from './pages/Error';
 
 import { useDarkMode } from './hooks/useDarkMode.js';
+import Navbar from './components/Navbar';
+import { Footer } from './components/Footer';
 
 function App() {
   const [theme, toggleTheme] = useDarkMode();
@@ -19,6 +21,7 @@ function App() {
       <BrowserRouter>
         <ThemeProvider theme={themeMode}>
           <GlobalStyles />
+          <Navbar theme={theme} toggleTheme={toggleTheme} />
           <Routes>
             <Route
               path='/'
@@ -29,6 +32,7 @@ function App() {
               <Route path='*' element={<Error />} />
             </Route>
           </Routes>
+          <Footer />
         </ThemeProvider>
       </BrowserRouter>
     </div>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Card = styled.div`
   width: 600px;
   height: 600px;
-  border: 1px solid lightgray;
+  border: 1px solid lightGray;
   border-radius: 1rem;
   padding: 2rem;
 `;

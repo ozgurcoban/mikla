@@ -19,7 +19,6 @@ export const ModalWrapper = styled.div`
   border-radius: 10px;
   position: relative;
   width: 90%;
-
   height: 80vh;
 `;
 

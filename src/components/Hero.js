@@ -1,32 +1,32 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { StyledHero, Pizza, Grill, Catering, H1 } from '../styles/Hero.styled';
+import styled from 'styled-components';
+
+import image from '../assets/img/hero_background.jpg';
+import CarouselComponent from './CarouselComponent';
 
 import Modal from './Modal';
 
 const Hero = () => {
   const [showModal, setShowModal] = useState(false);
 
-  const openModal = () => {
-    setShowModal(prev => !prev);
-  };
-  console.log(showModal);
+  const openModal = () => {};
+
   return (
-    <StyledHero>
-      <Link to='/pizza'>
-        <Pizza>
-          <H1>Pizza</H1>
-        </Pizza>
-      </Link>
-      <Grill>
-        <H1>Grill</H1>
-      </Grill>
-      <Catering onClick={openModal}>
-        <H1>Catering</H1>
-        <Modal showModal={showModal} setShowModal={setShowModal} />
-      </Catering>
-    </StyledHero>
+    <Section>
+      <CarouselComponent />
+    </Section>
   );
 };
 
 export default Hero;
+
+// const Section = styled.section`
+//   height: 80vh;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   align-items: center;
+//   background-color: lightCoral;
+// `;
+
+const Section = styled.section``;
