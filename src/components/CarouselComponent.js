@@ -10,34 +10,41 @@ import pic5 from '../assets/img/Hero/5.jpg';
 
 export default function CarouselComponent() {
   return (
-    <Carousel
-      animationHandler='fade'
-      autoPlay
-      infiniteLoop={true}
-      showArrows={false}
-      showThumbs={false}
-      showStatus={false}
-      swipeable={false}
-      showIndicators={false}
-      interval={4500}
-      transitionTime={2300}
-      stopOnHover={false}
-    >
-      <div>
-        <img src={pic1} />
-      </div>
-      <div>
-        <img src={pic2} />
-      </div>
-      <div>
-        <img src={pic3} />
-      </div>
+    <Div>
+      <Carousel
+        animationHandler='fade'
+        autoPlay
+        infiniteLoop={true}
+        showArrows={false}
+        showThumbs={false}
+        showStatus={false}
+        swipeable={false}
+        showIndicators={false}
+        interval={4500}
+        transitionTime={2300}
+        stopOnHover={false}
+      >
+        <div>
+          <img src={pic1} />
+        </div>
+        <div>
+          <img src={pic2} />
+        </div>
+        <div>
+          <img src={pic3} />
+        </div>
 
-      <div>
-        <img src={pic5} />
-      </div>
-    </Carousel>
+        <div>
+          <img src={pic5} />
+        </div>
+      </Carousel>
+    </Div>
   );
 }
 
-const Div = styled.div``;
+const Div = styled.div`
+  position: relative;
+  width: 100%;
+  top: 0;
+  z-index: -5;
+`;

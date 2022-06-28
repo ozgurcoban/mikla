@@ -1,11 +1,15 @@
-import React from 'react';
+import styled from 'styled-components';
 
 const AboutSection = () => {
   return (
-    <section>
+    <Section>
       <h1>Om Miklagård</h1>
-    </section>
+    </Section>
   );
 };
+
+const Section = styled.section`
+  height: 80vh;
+`;
 
 export default AboutSection;

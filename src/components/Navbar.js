@@ -15,26 +15,37 @@ const Navbar = ({ theme, toggleTheme }) => {
 
   return (
     <Header>
-      <Burger open={open} setOpen={setOpen} />
-      <Toggle theme={theme} toggleTheme={toggleTheme} />
+      <Container>
+        <Burger open={open} setOpen={setOpen} />
+        <Toggle theme={theme} toggleTheme={toggleTheme} />
 
-      <LinkWrapper>
-        <Link to='/'>Home</Link>
-        <Link to='menu'>Meny</Link>
-        <Link to='catering'>Catering</Link>
-      </LinkWrapper>
-      <SideMenu open={open} setOpen={setOpen} />
+        <LinkWrapper>
+          <Link to='/'>Home</Link>
+          <Link to='menu'>Meny</Link>
+          <Link to='catering'>Catering</Link>
+        </LinkWrapper>
+        <SideMenu open={open} setOpen={setOpen} />
+      </Container>
     </Header>
   );
 };
 
 const Header = styled.header`
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 6rem;
+  position: absolute;
+`;
+
+const Container = styled.div`
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const LinkWrapper = styled.div`

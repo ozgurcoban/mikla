@@ -1,11 +1,15 @@
-import React from 'react';
+import styled from 'styled-components';
 
 const MenuSection = () => {
   return (
-    <section>
+    <Section>
       <h1>Miklas meny</h1>
-    </section>
+    </Section>
   );
 };
 
 export default MenuSection;
+
+const Section = styled.section`
+  height: 80vh;
+`;
