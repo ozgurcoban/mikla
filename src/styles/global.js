@@ -27,7 +27,6 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0 auto;
     }
   }
-
   `;
 
 export const lightTheme = {
@@ -37,6 +36,7 @@ export const lightTheme = {
   sideMenuBackGround:
     'linear-gradient(0deg, rgba(237,239,255,1) 33%, rgba(255,210,213,1) 100%)',
   opacity: '0.6',
+  filter: 'brightness(0.8)',
 };
 
 export const darkTheme = {
@@ -45,4 +45,5 @@ export const darkTheme = {
   primary: '#bb86fc',
   sideMenuBackGround: 'rgb(42, 43, 46)',
   opacity: '0.2',
+  filter: 'brightness(0.5)',
 };

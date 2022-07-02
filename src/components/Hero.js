@@ -14,6 +14,10 @@ const Hero = () => {
   return (
     <Section>
       <CarouselComponent />
+      <Container>
+        <Logo />
+        <H1>Med autentiska smaker från Turkiet</H1>
+      </Container>
     </Section>
   );
 };
@@ -30,3 +34,9 @@ export default Hero;
 // `;
 
 const Section = styled.section``;
+
+const Container = styled.div``;
+
+const Logo = styled.image``;
+
+const H1 = styled.h1``;

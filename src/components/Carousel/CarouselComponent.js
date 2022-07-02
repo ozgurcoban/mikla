@@ -27,19 +27,19 @@ export default function CarouselComponent() {
         transitionTime={2300}
         stopOnHover={false}
       >
-        <div className='container'>
-          <img className='img' src={pic1} />
-        </div>
-        <div className='container'>
-          <img className='img' src={pic2} />
-        </div>
-        <div className='container'>
-          <img className='img' src={pic3} />
-        </div>
+        <Container>
+          <Img src={pic1} />
+        </Container>
+        <Container>
+          <Img src={pic2} />
+        </Container>
+        <Container>
+          <Img src={pic3} />
+        </Container>
 
-        <div className='container'>
-          <img className='img' src={pic5} />
-        </div>
+        <Container>
+          <Img src={pic5} />
+        </Container>
       </Carousel>
     </Div>
   );
@@ -48,7 +48,19 @@ export default function CarouselComponent() {
 const Div = styled.div`
   position: relative;
   width: 100%;
-
   top: 0;
   z-index: -5;
+`;
+
+const Container = styled.div`
+  height: 70vh;
+`;
+
+const Img = styled.img`
+  max-height: 100%;
+  max-width: 100%;
+  background-size: cover;
+  object-fit: cover;
+  filter: ${({ theme }) => theme.filter};
+  transition: all 0.3s linear;
 `;
